@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node scripts/check-csv-order.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fate-srd/fate-product-list.git"

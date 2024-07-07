@@ -49,8 +49,8 @@ Example output of unsuccessful test:
 
 check-csv-order: started.
 Mismatch on record 222:
- input: "Publisher Name: Modiphius, Product title: Mindjammer: The Mindjammer Companion"
-sorted: "Publisher Name: Modiphius, Product title: Mindjammer: The Core Worlds Sourcebook"
+ input: "Modiphius: Mindjammer: The Mindjammer Companion"
+sorted: "Modiphius: Mindjammer: The Core Worlds Sourcebook"
 %
 ```
 
