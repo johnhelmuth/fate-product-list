@@ -55,12 +55,12 @@ same line in the sorted file.
 
 check-csv-order: started.
 Mismatch on line 224:
- input: "Modiphius: Mindjammer: The Mindjammer Companion"
-sorted: "Modiphius: Mindjammer: The Core Worlds Sourcebook"
+ input: "Modiphius,Mindjammer: The Mindjammer Companion,https://www.drivethrurpg.com/product/225696/Mindjammer-The-Mindjammer-Companion?affiliate_id=144937"
+sorted: "Modiphius,Mindjammer: The Core Worlds Sourcebook,https://www.drivethrurpg.com/product/225695/Mindjammer-The-Core-Worlds-Sourcebook?affiliate_id=144937"
 
 Mismatch on line 225:
- input: "Modiphius: Mindjammer: The Core Worlds Sourcebook"
-sorted: "Modiphius: Mindjammer: The Mindjammer Companion"
+ input: "Modiphius,Mindjammer: The Core Worlds Sourcebook,https://www.drivethrurpg.com/product/225695/Mindjammer-The-Core-Worlds-Sourcebook?affiliate_id=144937"
+sorted: "Modiphius,Mindjammer: The Mindjammer Companion,https://www.drivethrurpg.com/product/225696/Mindjammer-The-Mindjammer-Companion?affiliate_id=144937"
 
 check-csv-order: finished.
 %

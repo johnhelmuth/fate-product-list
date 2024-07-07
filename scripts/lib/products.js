@@ -32,6 +32,7 @@ export class Product {
 
   publisherName = '';
   productTitle = '';
+  productLink = '';
 
   /**
    * Product constructor.
@@ -41,6 +42,7 @@ export class Product {
   constructor (record) {
     this.publisherName = record?.publisherName;
     this.productTitle = record?.productTitle;
+    this.productLink = record?.productLink;
   }
 
   /**
@@ -49,7 +51,7 @@ export class Product {
    * @returns {string}
    */
   toString() {
-    return `${this.publisherName}: ${this.productTitle}`;
+    return `${this.publisherName},${this.productTitle},${this.productLink}`;
   }
 
   /**
