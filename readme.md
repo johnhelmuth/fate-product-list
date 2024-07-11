@@ -48,19 +48,23 @@ Example output of unsuccessful test, which will list each row of the CSV file th
 same line in the sorted file.
 
 ```
-% npm test
+% npm test                                                     feature/check-ordering-js-refactor-tweaks-further-tweaks
 
 > fate-product-list@1.0.0 test
 > node scripts/check-csv-order.js
 
 check-csv-order: started.
-Mismatch on line 224:
- input: "Modiphius,Mindjammer: The Mindjammer Companion,https://www.drivethrurpg.com/product/225696/Mindjammer-The-Mindjammer-Companion?affiliate_id=144937"
-sorted: "Modiphius,Mindjammer: The Core Worlds Sourcebook,https://www.drivethrurpg.com/product/225695/Mindjammer-The-Core-Worlds-Sourcebook?affiliate_id=144937"
 
-Mismatch on line 225:
- input: "Modiphius,Mindjammer: The Core Worlds Sourcebook,https://www.drivethrurpg.com/product/225695/Mindjammer-The-Core-Worlds-Sourcebook?affiliate_id=144937"
-sorted: "Modiphius,Mindjammer: The Mindjammer Companion,https://www.drivethrurpg.com/product/225696/Mindjammer-The-Mindjammer-Companion?affiliate_id=144937"
+Products are out of order:
+
+Line 2: "A.C. Luke,Seven Demons: A Collection of NPCs for Fate Core,https://ac-luke.itch.io/fate-seven-demons"
+Line 3: "A.C. Luke,Heartbreaker,https://ac-luke.itch.io/heartbreaker-trifold"
+Line 33: "Ebon Gryphon Games,Collectanea Creaturae - Fate Core,https://www.drivethrurpg.com/product/130724/Collectanea-Creaturae--Fate-Core?affiliate_id=144937"
+Line 34: "Black Campbell Entertainment,Thrilling Action Stories! for FATE,https://www.drivethrurpg.com/product/218484/Thrilling-Action-Stories-for-FATE-BUNDLE?affiliate_id=144937"
+Line 38: "Evil Hat Productions,Arecibo • A World of Adventure for Fate Core,https://drivethrurpg.com/product/240445/Arecibo-o-A-World-of-Adventure-for-Fate-Core?affiliate_id=144937"
+Line 39: "Encoded Designs,Iron Edda Accelerated,https://www.drivethrurpg.com/product/261741/Iron-Edda-Accelerated?affiliate_id=144937"
+Line 51: "Evil Hat Productions,Behind the Walls • A World of Adventure for Fate Core,https://drivethrurpg.com/product/148388/Behind-the-Walls--A-World-of-Adventure-for-Fate-Core?affiliate_id=144937"
+Line 52: "Evil Hat Productions,Atomic Robo RPG • VTT Art Pack,https://evilhat.itch.io/atomic-robo-rpg-vtt-token-pack"
 
 check-csv-order: finished.
 %
