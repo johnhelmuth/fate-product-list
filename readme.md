@@ -16,6 +16,8 @@ The submission will be reviewed and added to the Fate SRD. This usually happens 
 
 If you are comfortable with editing files and git/Github, you may [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). It will be reviewed and added to the site.
 
+#### Testing your changes
+
 There is a Github check configured to ensure the CSV file is in the expected order. This check is implemented a small
 Javascript script that runs under [Nodejs](https://nodejs.org/) version 20.x, which is required. You will get a warning
 from `npm` if you try this with older versions of Nodejs.
@@ -36,11 +38,15 @@ Example output of successful test:
 > node scripts/check-csv-order.js
 
 check-csv-order: started.
-check-csv-order: finished, fate-product-list.csv is correctly ordered.
+fate-product-list.csv is correctly ordered.
+check-csv-order: finished.
 %
 ```
 
-Example output of unsuccessful test:
+Example output of unsuccessful test, which will list each row of the CSV file that is out of order. The
+"input" value is the value in the mentioned line in the CSV file, the "sorted" value is the value in that
+same line in the sorted file.
+
 ```
 % npm test
 
@@ -48,9 +54,15 @@ Example output of unsuccessful test:
 > node scripts/check-csv-order.js
 
 check-csv-order: started.
-Mismatch on record 222:
+Mismatch on line 224:
  input: "Modiphius: Mindjammer: The Mindjammer Companion"
 sorted: "Modiphius: Mindjammer: The Core Worlds Sourcebook"
+
+Mismatch on line 225:
+ input: "Modiphius: Mindjammer: The Core Worlds Sourcebook"
+sorted: "Modiphius: Mindjammer: The Mindjammer Companion"
+
+check-csv-order: finished.
 %
 ```
 

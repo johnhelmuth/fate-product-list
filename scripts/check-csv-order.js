@@ -16,11 +16,14 @@ import {getProducts, Product}  from './lib/products.js';
   // Compare input products to sorted products, exit with process error on first difference.
   for (let i = 0; i < products.length; i++) {
     if (products[i].compare(productsSorted[i]) !== 0) {
-      console.log(`Mismatch on line ${i+2}:\n input: "${products[i].toString()}"\nsorted: "${productsSorted[i].toString()}"`)
-      process.exit(1);
+      console.log(`Mismatch on line ${i+2}:\n input: "${products[i].toString()}"\nsorted: "${productsSorted[i].toString()}"\n`)
+      process.exitCode = 1;
     }
   }
-  console.log(`check-csv-order: finished, ${path} is correctly ordered.`);
+  if (typeof process.exitCode === 'undefined') {
+    console.log(`${path} is correctly ordered.`);
+  }
+  console.log(`check-csv-order: finished.`);
 })('fate-product-list.csv');
 
 
