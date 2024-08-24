@@ -31,9 +31,16 @@ jobs:
 
           if git diff --name-only ${{ toJson(github.event.pull_request.base.sha) }} ${{ toJson(github.event.pull_request.head.sha) }} | grep fate-product-list.csv
           then
+            # Note: the following account information will not work on GHES
+            # Taken from the checkout github action, used above, at https://github.com/actions/checkout
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
             if npm version major -m "Version updated to %s because product list changed."
             then
               echo "Version updated to "  $( jq .version package.json ) "."
+              git status
+              git push --follow-tags
               git describe
             else
               echo "Couldn't update version for some reason."
